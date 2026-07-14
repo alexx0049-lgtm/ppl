@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#050505" />
+  <title>PPL Academy — Flying Training</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">✈</div>
+        <div><strong>PPL ACADEMY</strong><span>Flying Training • Volume 1</span></div>
+      </div>
+
+      <nav class="nav">
+        <button class="nav-item active" data-target="dashboard">Overview</button>
+        <button class="nav-item" data-target="learn">Learn</button>
+        <button class="nav-item" data-target="visual">Visual</button>
+        <button class="nav-item" data-target="flashcards">Flashcards</button>
+        <button class="nav-item" data-target="quiz">Quiz</button>
+      </nav>
+
+      <div class="chapter-mini-list" id="chapterMiniList"></div>
+
+      <div class="sidebar-progress">
+        <div class="eyebrow">COURSE PROGRESS</div>
+        <div class="progress-row"><span id="coursePercent">0%</span><span id="courseCount">0 / 10</span></div>
+        <div class="progress-track"><div id="courseBar" class="progress-fill"></div></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <span class="eyebrow" id="chapterKicker">PPL • VOLUME 1</span>
+          <h1 id="pageTitle">Flying Training</h1>
+        </div>
+        <div class="top-actions">
+          <button id="openChapters" class="ghost-btn">Chapters</button>
+          <button id="resetProgress" class="ghost-btn">Reset progress</button>
+        </div>
+      </header>
+
+      <section id="dashboard" class="panel active-panel">
+        <div class="hero-card">
+          <div>
+            <span class="status-pill" id="heroPill">10 CHAPTERS READY</span>
+            <h2 id="heroTitle">Learn flying as a sequence of small, clear actions.</h2>
+            <p id="heroText">Primele 10 capitole sunt transformate în lecții scurte, scheme vizuale, flashcards și quiz-uri. Alege un capitol și începe.</p>
+            <button class="primary-btn" id="continueBtn">Start Chapter 1 →</button>
+          </div>
+          <div class="hero-stat">
+            <span>Overall progress</span>
+            <strong id="heroProgress">0%</strong>
+            <small id="heroSubtext">10 chapters • 50 quiz questions</small>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <article class="stat-card"><span>Chapters completed</span><strong id="chaptersCompleted">0/10</strong><small>learn + visual + quiz</small></article>
+          <article class="stat-card"><span>Best quiz average</span><strong id="averageScore">—</strong><small>across attempted chapters</small></article>
+          <article class="stat-card"><span>Flashcards seen</span><strong id="totalCardsSeen">0</strong><small>out of 50</small></article>
+        </div>
+
+        <div class="section-card">
+          <div class="section-heading">
+            <div><span class="eyebrow">FLYING TRAINING</span><h3>First 10 chapters</h3></div>
+            <span class="muted small-copy">Tap any chapter to study</span>
+          </div>
+          <div class="chapter-grid" id="chapterGrid"></div>
+        </div>
+
+        <div class="section-card compact-card">
+          <span class="eyebrow">IMPORTANT</span>
+          <p class="muted safety-copy">Acest site este un companion de studiu. Pentru operarea reală a aeronavei, procedurile instructorului, AFM/POH, checklist-urile aprobate și regulile aplicabile au prioritate.</p>
+        </div>
+      </section>
+
+      <section id="learn" class="panel">
+        <div class="lesson-toolbar">
+          <button class="chapter-step ghost-btn" data-dir="-1">← Previous</button>
+          <div class="lesson-position"><span id="lessonNumber">01</span><small id="lessonPositionText">Chapter 1 of 10</small></div>
+          <button class="chapter-step ghost-btn" data-dir="1">Next →</button>
+        </div>
+
+        <div class="section-card lesson-card">
+          <span class="eyebrow" id="learnEyebrow">CORE IDEA</span>
+          <h2 id="learnTitle"></h2>
+          <p class="lead" id="learnLead"></p>
+          <div class="concept-grid" id="conceptGrid"></div>
+        </div>
+
+        <div class="section-card">
+          <span class="eyebrow">PILOT MENTAL MODEL</span>
+          <h2 id="memoryTitle"></h2>
+          <div class="memory-flow" id="memoryFlow"></div>
+        </div>
+
+        <div class="section-card remember-card">
+          <span class="eyebrow">REMEMBER</span>
+          <div class="memory-line" id="rememberLine"></div>
+          <button id="markLearned" class="primary-btn">Mark Learn complete</button>
+        </div>
+      </section>
+
+      <section id="visual" class="panel">
+        <div class="section-card">
+          <span class="eyebrow">VISUAL LEARN</span>
+          <h2 id="visualTitle">See the logic</h2>
+          <p class="muted" id="visualIntro"></p>
+          <div class="visual-board" id="visualBoard"></div>
+          <button id="markVisual" class="primary-btn">Mark Visual complete</button>
+        </div>
+      </section>
+
+      <section id="flashcards" class="panel">
+        <div class="section-card">
+          <span class="eyebrow">PILOT MEMORY CARDS</span>
+          <h2 id="flashTitle">Quick recall</h2>
+          <div class="flashcard-wrap">
+            <button id="flashcard" class="flashcard" aria-label="Reveal flashcard answer">
+              <span id="cardLabel" class="eyebrow">CARD 1 / 5</span>
+              <strong id="cardFront"></strong>
+              <p id="cardBack" class="hidden-answer"></p>
+              <small>tap to flip</small>
+            </button>
+          </div>
+          <div class="flash-actions">
+            <button id="prevCard" class="ghost-btn">← Previous</button>
+            <button id="againCard" class="ghost-btn">Again</button>
+            <button id="easyCard" class="primary-btn">Easy →</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="quiz" class="panel">
+        <div class="section-card quiz-card">
+          <div class="quiz-top">
+            <div><span class="eyebrow">KNOWLEDGE CHECK</span><h2 id="quizTitle">Question 1 / 5</h2></div>
+            <strong id="quizLiveScore">0 correct</strong>
+          </div>
+          <div class="quiz-progress"><div id="quizBar"></div></div>
+          <h3 id="questionText" class="question-text"></h3>
+          <div id="answers" class="answers"></div>
+          <div id="feedback" class="feedback"></div>
+          <button id="nextQuestion" class="primary-btn hidden">Next question →</button>
+          <div id="quizResult" class="quiz-result hidden"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="chapter-drawer hidden" id="chapterDrawer" aria-hidden="true">
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+    <div class="drawer-panel">
+      <div class="drawer-head"><div><span class="eyebrow">SELECT CHAPTER</span><h2>Flying Training</h2></div><button id="closeDrawer" class="icon-btn">×</button></div>
+      <div class="drawer-list" id="drawerList"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
