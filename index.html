@@ -1,176 +1,106 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#050505" />
-  <title>PPL Academy — Flying Training</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#050505">
+  <title>PPL Academy — Research Edition</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div class="app-shell">
-    <aside class="sidebar">
-      <div class="brand">
-        <div class="brand-mark">✈</div>
-        <div><strong>PPL ACADEMY</strong><span>Flying Training • Volume 1</span></div>
-      </div>
-
-      <nav class="nav">
-        <button class="nav-item active" data-target="dashboard">Overview</button>
-        <button class="nav-item" data-target="learn">Learn</button>
-        <button class="nav-item" data-target="visual">Visual</button>
-        <button class="nav-item" data-target="flashcards">Flashcards</button>
-        <button class="nav-item" data-target="quiz">Quiz</button>
-      </nav>
-
-      <div class="chapter-mini-list" id="chapterMiniList"></div>
-
-      <div class="sidebar-progress">
-        <div class="eyebrow">COURSE PROGRESS</div>
-        <div class="progress-row"><span id="coursePercent">0%</span><span id="courseCount">0 / 10</span></div>
-        <div class="progress-track"><div id="courseBar" class="progress-fill"></div></div>
-      </div>
-    </aside>
-
-    <main class="main">
-      <header class="topbar">
-        <div>
-          <span class="eyebrow" id="chapterKicker">PPL • VOLUME 1</span>
-          <h1 id="pageTitle">Flying Training</h1>
-        </div>
-        <div class="top-actions">
-          <button id="openChapters" class="ghost-btn">Chapters</button>
-          <span class="hover-hint">Hover Romanian text → English</span><button id="resetProgress" class="ghost-btn">Reset progress</button>
-        </div>
-      </header>
-
-      <section id="dashboard" class="panel active-panel">
-        <div class="hero-card">
-          <div>
-            <span class="status-pill" id="heroPill">10 CHAPTERS READY</span>
-            <h2 id="heroTitle">Learn flying as a sequence of small, clear actions.</h2>
-            <p id="heroText">Primele 10 capitole sunt transformate în lecții scurte, scheme vizuale, flashcards și quiz-uri. Alege un capitol și începe.</p>
-            <button class="primary-btn" id="continueBtn">Start Chapter 1 →</button>
-          </div>
-          <div class="hero-stat">
-            <span>Overall progress</span>
-            <strong id="heroProgress">0%</strong>
-            <small id="heroSubtext">10 chapters • 50 quiz questions</small>
-          </div>
-        </div>
-
-        <div class="stats-grid">
-          <article class="stat-card"><span>Chapters completed</span><strong id="chaptersCompleted">0/10</strong><small>learn + visual + quiz</small></article>
-          <article class="stat-card"><span>Best quiz average</span><strong id="averageScore">—</strong><small>across attempted chapters</small></article>
-          <article class="stat-card"><span>Flashcards seen</span><strong id="totalCardsSeen">0</strong><small>out of 50</small></article>
-        </div>
-
-        <div class="section-card">
-          <div class="section-heading">
-            <div><span class="eyebrow">FLYING TRAINING</span><h3>First 10 chapters</h3></div>
-            <span class="muted small-copy">Tap any chapter to study</span>
-          </div>
-          <div class="chapter-grid" id="chapterGrid"></div>
-        </div>
-
-        <div class="section-card compact-card">
-          <span class="eyebrow">IMPORTANT</span>
-          <p class="muted safety-copy">Acest site este un companion de studiu. Pentru operarea reală a aeronavei, procedurile instructorului, AFM/POH, checklist-urile aprobate și regulile aplicabile au prioritate.</p>
-        </div>
-      </section>
-
-      <section id="learn" class="panel">
-        <div class="lesson-toolbar">
-          <button class="chapter-step ghost-btn" data-dir="-1">← Previous</button>
-          <div class="lesson-position"><span id="lessonNumber">01</span><small id="lessonPositionText">Chapter 1 of 10</small></div>
-          <button class="chapter-step ghost-btn" data-dir="1">Next →</button>
-        </div>
-
-        <div class="section-card lesson-card">
-          <span class="eyebrow" id="learnEyebrow">CORE IDEA</span>
-          <h2 id="learnTitle"></h2>
-          <p class="lead" id="learnLead"></p>
-          <div class="concept-grid" id="conceptGrid"></div>
-        </div>
-
-        <div class="section-card">
-          <span class="eyebrow">PILOT MENTAL MODEL</span>
-          <h2 id="memoryTitle"></h2>
-          <div class="memory-flow" id="memoryFlow"></div>
-        </div>
-
-
-        <div class="section-card source-card">
-          <div class="source-card-head">
-            <div><span class="eyebrow">SOURCE CHECK</span><h3>Where this lesson comes from</h3></div>
-            <span class="source-status">BOOK-ALIGNED</span>
-          </div>
-          <p id="sourceReference" class="source-reference"></p>
-          <p class="muted source-note">The lesson is a simplified study summary, not an operational procedure. Current regulations, your instructor, the aircraft AFM/POH and approved checklists take priority.</p>
-        </div>
-
-        <div class="section-card remember-card">
-          <span class="eyebrow">REMEMBER</span>
-          <div class="memory-line" id="rememberLine"></div>
-          <button id="markLearned" class="primary-btn">Mark Learn complete</button>
-        </div>
-      </section>
-
-      <section id="visual" class="panel">
-        <div class="section-card">
-          <span class="eyebrow">VISUAL LEARN</span>
-          <h2 id="visualTitle">See the logic</h2>
-          <p class="muted" id="visualIntro"></p>
-          <div class="visual-board" id="visualBoard"></div>
-          <button id="markVisual" class="primary-btn">Mark Visual complete</button>
-        </div>
-      </section>
-
-      <section id="flashcards" class="panel">
-        <div class="section-card">
-          <span class="eyebrow">PILOT MEMORY CARDS</span>
-          <h2 id="flashTitle">Quick recall</h2>
-          <div class="flashcard-wrap">
-            <button id="flashcard" class="flashcard" aria-label="Reveal flashcard answer">
-              <span id="cardLabel" class="eyebrow">CARD 1 / 5</span>
-              <strong id="cardFront"></strong>
-              <p id="cardBack" class="hidden-answer"></p>
-              <small>tap to flip</small>
-            </button>
-          </div>
-          <div class="flash-actions">
-            <button id="prevCard" class="ghost-btn">← Previous</button>
-            <button id="againCard" class="ghost-btn">Again</button>
-            <button id="easyCard" class="primary-btn">Easy →</button>
-          </div>
-        </div>
-      </section>
-
-      <section id="quiz" class="panel">
-        <div class="section-card quiz-card">
-          <div class="quiz-top">
-            <div><span class="eyebrow">KNOWLEDGE CHECK</span><h2 id="quizTitle">Question 1 / 5</h2></div>
-            <strong id="quizLiveScore">0 correct</strong>
-          </div>
-          <div class="quiz-progress"><div id="quizBar"></div></div>
-          <h3 id="questionText" class="question-text"></h3>
-          <div id="answers" class="answers"></div>
-          <div id="feedback" class="feedback"></div>
-          <button id="nextQuestion" class="primary-btn hidden">Next question →</button>
-          <div id="quizResult" class="quiz-result hidden"></div>
-        </div>
-      </section>
-    </main>
-  </div>
-
-  <div class="chapter-drawer hidden" id="chapterDrawer" aria-hidden="true">
-    <div class="drawer-backdrop" id="drawerBackdrop"></div>
-    <div class="drawer-panel">
-      <div class="drawer-head"><div><span class="eyebrow">SELECT CHAPTER</span><h2>Flying Training</h2></div><button id="closeDrawer" class="icon-btn">×</button></div>
-      <div class="drawer-list" id="drawerList"></div>
+<body class="lang-bilingual">
+<div class="shell">
+  <aside class="sidebar">
+    <div class="brand"><span>✈</span><div><b>PPL ACADEMY</b><small>Research Edition • EASA track</small></div></div>
+    <nav>
+      <button class="nav active" data-view="overview">Overview</button>
+      <button class="nav" data-view="course">Flight Course</button>
+      <button class="nav" data-view="theory">Theory Map</button>
+      <button class="nav" data-view="review">Weak Areas</button>
+      <button class="nav" data-view="glossary">Glossary</button>
+    </nav>
+    <div class="side-progress">
+      <small>FLIGHT TRACK</small>
+      <div><strong id="sidePct">0%</strong><span id="sideDone">0 / 10 complete</span></div>
+      <i><b id="sideBar"></b></i>
     </div>
-  </div>
+    <div class="research-stamp"><em></em><div><b>Research snapshot</b><small>14 July 2026</small></div></div>
+  </aside>
 
-  <script src="app.js"></script>
+  <main>
+    <header class="topbar">
+      <div><small id="kicker">PPL(A) STUDY SYSTEM</small><h1 id="pageTitle">Your PPL learning cockpit</h1></div>
+      <div class="actions">
+        <div class="lang">
+          <button data-lang="ro">RO</button>
+          <button class="active" data-lang="bilingual">RO + EN</button>
+          <button data-lang="en">EN</button>
+        </div>
+        <button class="ghost" id="reset">Reset</button>
+      </div>
+    </header>
+
+    <section class="view active" id="overview">
+      <div class="hero">
+        <div>
+          <span class="pill green">RESEARCH-BACKED • SOURCE-TRACEABLE</span>
+          <h2>Învață PPL ca un pilot, <span>nu ca un cititor de PDF.</span></h2>
+          <p>Concept → explicație practică → common mistake → sursă → quiz → weak areas.</p>
+          <div class="row"><button class="primary" id="continue">Continue flight training →</button><button class="ghost jump" data-view="theory">See theory map</button></div>
+        </div>
+        <div class="meter"><small>COURSE READINESS</small><strong id="overallPct">0%</strong><span id="overallText">Start Chapter 1</span></div>
+      </div>
+
+      <div class="stats">
+        <article><span>Flight chapters</span><strong>10</strong><small>expanded lessons</small></article>
+        <article><span>Knowledge checks</span><strong id="qCount">—</strong><small>with explanations</small></article>
+        <article><span>Theory map</span><strong>9</strong><small>EASA subject areas</small></article>
+      </div>
+
+      <div class="panel">
+        <div class="head"><div><small>CURRENT PPL(A) ROADMAP</small><h3>What the licence path contains</h3></div><span class="pill blue">EASA CHECKED</span></div>
+        <div id="requirements" class="requirements"></div>
+        <p class="note">Use these figures as a roadmap. Your competent authority, DTO/ATO and the current applicable rules remain authoritative.</p>
+      </div>
+
+      <div class="panel">
+        <div class="head"><div><small>FLIGHT TRAINING</small><h3>First 10 chapters — research edition</h3></div><button class="ghost jump" data-view="course">Open course →</button></div>
+        <div id="overviewChapters" class="chapter-grid"></div>
+      </div>
+
+      <div class="panel">
+        <div class="head"><div><small>TRUST LAYER</small><h3>Why each claim is on the page</h3></div></div>
+        <div id="trustCards" class="trust-grid"></div>
+      </div>
+    </section>
+
+    <section class="view" id="course">
+      <div class="panel intro"><small>FLIGHT TRAINING • FOUNDATION</small><h2>Aircraft familiarisation → slow flight and stalls</h2><p>Primele 10 capitole din manualul tău, refăcute ca lecții de studiu și cross-checked cu surse oficiale.</p></div>
+      <div id="courseList" class="course-list"></div>
+    </section>
+
+    <section class="view" id="lesson">
+      <div class="lesson-nav"><button class="ghost" id="back">← All chapters</button><div><button class="ghost" id="prev">← Previous</button><button class="ghost" id="next">Next →</button></div></div>
+      <div id="lessonContent"></div>
+    </section>
+
+    <section class="view" id="theory">
+      <div class="panel intro"><small>PPL THEORETICAL KNOWLEDGE</small><h2>The 9-subject map</h2><p>Acesta este syllabus map-ul. Când îmi trimiți volumele pentru Air Law, Meteorology, Navigation și celelalte, fiecare devine un curs complet ca Flight Training.</p></div>
+      <div id="theoryGrid" class="theory-grid"></div>
+    </section>
+
+    <section class="view" id="review">
+      <div class="panel intro"><small>ADAPTIVE REVIEW</small><h2>Your weak areas</h2><p>Întrebările greșite sunt salvate local și apar aici.</p></div>
+      <div id="weak"></div>
+    </section>
+
+    <section class="view" id="glossary">
+      <div class="panel intro"><small>AVIATION ENGLISH</small><h2>Glossary</h2><p>Termenii-cheie rămân în engleză, cu explicația în RO / RO+EN / EN.</p><input id="glossarySearch" placeholder="Search: stall, trim, yaw, energy…"></div>
+      <div id="glossaryGrid" class="glossary-grid"></div>
+    </section>
+  </main>
+</div>
+<div id="toast" class="toast"></div>
+<script src="data.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
