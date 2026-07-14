@@ -283,6 +283,144 @@ const chapters = [
   }
 ];
 
+
+const EN_TRANSLATIONS = {
+  "Construiește o hartă mentală a avionului înainte să înveți manevrele: structură, propulsie, comenzi și instrumente.": "Build a mental map of the aircraft before learning manoeuvres: structure, propulsion, controls and instruments.",
+  "Fuselajul leagă aripile, coada, trenul de aterizare și cockpitul într-o singură structură.": "The fuselage connects the wings, tail, landing gear and cockpit into one structure.",
+  "Aripile generează portanță, iar ampenajul contribuie la stabilitate și control.": "The wings generate lift, while the empennage contributes to stability and control.",
+  "Motorul furnizează putere; elicea transformă această putere în tracțiune.": "The engine supplies power; the propeller converts that power into thrust.",
+  "Elevatorul controlează pitch, eleroanele roll, iar direcția rudder-ul pe axa de yaw.": "The elevator controls pitch, the ailerons control roll, and the rudder controls yaw.",
+  "Apasă pe componente pentru o explicație rapidă.": "Tap or hover over the components for a quick explanation.",
+  "Transformă puterea motorului în tracțiune.": "Converts engine power into thrust.",
+  "Locul pilotului, comenzilor și instrumentelor.": "The location of the pilot, controls and instruments.",
+  "Suprafața principală care produce portanță.": "The main surface that produces lift.",
+  "Controlează înclinarea pe axa de roll.": "Controls banking about the roll axis.",
+  "Corpul principal care unește componentele.": "The main body that connects the components.",
+  "Stabilizează avionul și găzduiește suprafețe de control.": "Stabilises the aircraft and carries control surfaces.",
+  "Elevatorul controlează pitch-ul.": "The elevator controls pitch.",
+  "Eleroanele controlează roll-ul.": "The ailerons control roll.",
+  "Elicea produce tracțiune.": "The propeller produces thrust.",
+  "Rudder-ul controlează yaw-ul.": "The rudder controls yaw.",
+  "Fuselajul este corpul principal al avionului.": "The fuselage is the main body of the aircraft.",
+  "Un zbor bun începe înainte de pornirea motorului și se încheie după oprirea lui: pregătire, inspecție, pornire, oprire și securizare.": "A good flight begins before engine start and ends after shutdown: preparation, inspection, start, shutdown and securing the aircraft.",
+  "Verifică starea personală, documentele și condițiile înainte de a te apropia de avion.": "Check your personal fitness, documents and conditions before approaching the aircraft.",
+  "Folosește o ordine constantă pentru inspecția internă și externă, astfel încât nimic să nu fie omis.": "Use a consistent sequence for the internal and external inspection so that nothing is missed.",
+  "Zona elicei trebuie să fie liberă; checklist-ul și poziționarea comenzilor reduc riscul la pornire.": "The propeller area must be clear; the checklist and correct control positioning reduce risk during start.",
+  "După oprire, completează acțiunile post-zbor și securizează aeronava conform procedurilor.": "After shutdown, complete the post-flight actions and secure the aircraft in accordance with procedures.",
+  "Fluxul complet înainte și după zbor.": "The complete before-and-after-flight flow.",
+  "O ordine constantă reduce omisiunile.": "A consistent sequence reduces omissions.",
+  "Zona elicei trebuie să fie liberă.": "The propeller area must be clear.",
+  "Procedurile aprobate și checklist-ul au prioritate.": "Approved procedures and the checklist take priority.",
+  "Aeronava trebuie oprită și securizată corect.": "The aircraft must be shut down and secured correctly.",
+  "Pregătirea este mai largă decât simpla pornire.": "Preparation involves more than simply starting the engine.",
+  "Prima experiență în aer este despre orientare: ce vezi, ce simți și cum arată o atitudine normală înainte să începi să pilotezi activ.": "Your first experience in the air is about orientation: what you see, what you feel and what a normal attitude looks like before you begin actively flying.",
+  "Orizontul și reperele exterioare sunt principalele referințe pentru atitudine în zbor vizual.": "The horizon and outside references are the primary attitude references in visual flight.",
+  "Observă zgomotul, vibrațiile, accelerațiile și răspunsul avionului fără să te grăbești să controlezi.": "Notice the noise, vibrations, accelerations and aircraft response without rushing to take control.",
+  "Învață unde sunt comenzile și instrumentele, apoi revino constant cu privirea afară.": "Learn where the controls and instruments are, then keep returning your eyes outside.",
+  "Leagă poziția avionului de aerodrom, teren, trafic și direcția de zbor.": "Relate the aircraft position to the aerodrome, terrain, traffic and direction of flight.",
+  "Un scan simplu pentru primele ore de zbor.": "A simple scan for the first hours of flight.",
+  "În zbor vizual, imaginea exterioară este referința principală.": "In visual flight, the outside picture is the primary reference.",
+  "Privirea revine afară pentru lookout și atitudine.": "Your eyes return outside for lookout and attitude reference.",
+  "Scopul este familiarizarea cu mediul de zbor.": "The aim is to become familiar with the flying environment.",
+  "Conștientizarea traficului este esențială.": "Traffic awareness is essential.",
+  "Folosește exteriorul ca bază și instrumentele pentru confirmare.": "Use the outside picture as the primary reference and instruments for confirmation.",
+  "Înțelege efectul primar și efectele ulterioare ale comenzilor, apoi adaugă trim, putere, flaps, mixture și radio.": "Understand the primary and further effects of the controls, then add trim, power, flaps, mixture and radio use.",
+  "Elevator → pitch, ailerons → roll, rudder → yaw. Acestea sunt legăturile de bază.": "Elevator → pitch, ailerons → roll, rudder → yaw. These are the basic relationships.",
+  "O comandă poate genera efecte secundare; avionul trebuie coordonat, nu pilotat pe o singură axă.": "A control input can create secondary effects; the aircraft must be coordinated rather than flown on only one axis.",
+  "Trim-ul elimină presiunea continuă necesară pentru menținerea unei atitudini sau viteze stabilizate.": "Trim removes the continuous control pressure required to maintain a stabilised attitude or speed.",
+  "Viteza, slipstream-ul, puterea și flaps-urile schimbă eficiența comenzilor și atitudinea necesară.": "Airspeed, slipstream, power and flaps change control effectiveness and the attitude required.",
+  "Cele trei axe și comenzile lor principale.": "The three axes and their primary controls.",
+  "Trim-ul reduce presiunea continuă pe comandă.": "Trim reduces continuous pressure on the controls.",
+  "Mai puțin airflow înseamnă răspuns mai redus.": "Less airflow generally means reduced control response.",
+  "Puterea poate modifica tendințele de pitch și yaw.": "Power changes can alter pitch and yaw tendencies.",
+  "Flaps-urile schimbă portanța și rezistența.": "Flaps change lift and drag characteristics.",
+  "Pe sol, obiectivul este simplu: mișcare controlată, viteză mică, direcție precisă și oprire sigură.": "On the ground, the objective is simple: controlled movement, low speed, precise direction and a safe stop.",
+  "Este nevoie de mai multă putere pentru a învinge inerția decât pentru a menține rulajul.": "More power is usually needed to overcome inertia than to keep the aircraft rolling.",
+  "Redu puterea pentru încetinire; folosește frânele lin și ferm doar cât este necesar.": "Reduce power to slow down; use the brakes smoothly and firmly only as much as necessary.",
+  "Direcția se controlează prin sistemul aeronavei, de regulă cu pedalele și, după caz, frânare diferențială.": "Direction is controlled using the aircraft system, typically the pedals and, where applicable, differential braking.",
+  "Scanează înainte, lateral și în viraje; viteza trebuie adaptată spațiului și suprafeței.": "Scan ahead, to the sides and through turns; speed must be adapted to the available space and surface.",
+  "Secvența de control a vitezei la taxi.": "The sequence for controlling taxi speed.",
+  "Puterea pornește mișcarea.": "Power initiates movement.",
+  "Reducerea puterii permite frecării să încetinească avionul.": "Reducing power allows friction to slow the aircraft.",
+  "O viteză apropiată de mers alert este o referință utilă.": "A brisk walking pace is a useful general reference.",
+  "Evită să lupți cu frânele folosind putere.": "Avoid using power against the brakes.",
+  "Spațiul redus cere viteză mai mică.": "Confined space requires a lower speed.",
+  "Zborul drept și nivelat este baza tuturor manevrelor: atitudine stabilă, direcție constantă, avion în echilibru și viteză controlată.": "Straight and level flight is the basis of all manoeuvres: stable attitude, constant direction, balanced flight and controlled airspeed.",
+  "Alege imaginea corectă față de orizont și menține-o cu elevatorul.": "Select the correct picture relative to the horizon and maintain it with the elevator.",
+  "La o configurație dată, schimbarea puterii cere o nouă combinație de atitudine și trim.": "For a given configuration, a power change requires a new combination of attitude and trim.",
+  "Folosește rudder-ul pentru a menține zborul coordonat și a evita alunecarea sau derapajul.": "Use the rudder to maintain coordinated flight and avoid slipping or skidding.",
+  "Stabilește mai întâi atitudinea și puterea, apoi trimează pentru a elimina presiunea.": "Set the attitude and power first, then trim to remove the control pressure.",
+  "Cum schimbi viteza și revii la un nou zbor stabilizat.": "How to change airspeed and establish a new stabilised condition.",
+  "Trim-ul vine după stabilizarea atitudinii și puterii.": "Trim comes after the attitude and power have been stabilised.",
+  "Rudder-ul este folosit pentru coordonare.": "The rudder is used for coordination.",
+  "Exteriorul rămâne central în VFR.": "The outside visual picture remains central in VFR.",
+  "Viteza stabilizată rezultă dintr-o nouă combinație.": "A new stabilised airspeed results from a new attitude-and-power combination.",
+  "Trim-ul nu înlocuiește comanda, ci elimină presiunea susținută.": "Trim does not replace control input; it removes sustained control pressure.",
+  "În urcare, surplusul de putere este transformat în creștere de altitudine. Viteza țintă se ține în principal prin atitudine.": "In a climb, excess power is converted into an increase in altitude. Target airspeed is controlled mainly by attitude.",
+  "Setează puterea de urcare conform aeronavei și procedurii.": "Set climb power in accordance with the aircraft and procedure.",
+  "Ridică nasul la atitudinea de urcare și corectează cu elevatorul pentru viteza dorită.": "Raise the nose to the climb attitude and use the elevator to correct for the desired airspeed.",
+  "Corectează tendințele produse de putere și păstrează lookout-ul, inclusiv prin mici schimbări de direcție dacă vizibilitatea înainte este redusă.": "Correct the tendencies produced by power and maintain lookout, including small changes of direction if forward visibility is reduced.",
+  "Anticipează nivelarea: schimbă atitudinea, lasă viteza să crească, setează puterea de croazieră și trimează.": "Anticipate level-off: change the attitude, allow the speed to increase, set cruise power and trim.",
+  "O secvență simplificată de intrare și ieșire din urcare.": "A simplified sequence for entering and leaving a climb.",
+  "Atitudinea este ajustată pentru viteza de urcare.": "Attitude is adjusted to control climb airspeed.",
+  "Surplusul de putere susține urcarea.": "Excess power supports the climb.",
+  "Lookout-ul trebuie menținut activ.": "Active lookout must be maintained.",
+  "Nivelarea se anticipează pentru a evita overshoot-ul.": "Level-off is anticipated to avoid overshooting the target altitude.",
+  "Trimează după stabilizare.": "Trim after the aircraft is stabilised.",
+  "Coborârea poate fi în planare, cu putere, cu flaps sau prin sideslip. Fiecare metodă schimbă relația dintre viteză, pantă și rata de coborâre.": "A descent can be a glide, a powered descent, a flap-assisted descent or a sideslip. Each method changes the relationship between airspeed, flight path and rate of descent.",
+  "Cu putere redusă, atitudinea este ajustată pentru viteza de planare dorită.": "With reduced power, attitude is adjusted for the desired glide airspeed.",
+  "Puterea permite modificarea ratei și pantei fără aceeași pierdere de energie ca într-o planare pură.": "Power allows the rate and flight path angle to be modified without the same energy loss as in a pure glide.",
+  "Flaps-urile cresc rezistența și permit o configurație diferită, cu limite de viteză care trebuie respectate.": "Flaps increase drag and allow a different configuration, with airspeed limits that must be observed.",
+  "Comenzi încrucișate pot crește rata de coborâre, dar manevra se folosește numai dacă este aprobată pentru aeronavă și situație.": "Crossed controls can increase the rate of descent, but the manoeuvre should only be used when approved for the aircraft and appropriate to the situation.",
+  "Patru moduri de a coborî, fiecare cu alt scop.": "Four ways to descend, each with a different purpose.",
+  "Atitudinea controlează viteza de planare.": "Attitude controls glide airspeed.",
+  "Flaps-urile cresc rezistența.": "Flaps increase drag.",
+  "Sideslip-ul folosește comenzi încrucișate.": "A sideslip uses crossed aileron and rudder inputs.",
+  "Nu toate aeronavele/configurațiile permit manevra.": "Not all aircraft or configurations permit the manoeuvre.",
+  "Puterea oferă o variabilă suplimentară.": "Power provides an additional variable.",
+  "Un viraj coordonat înseamnă bank controlat, rudder pentru echilibru și elevator pentru a menține variabila dorită: altitudine sau viteză.": "A coordinated turn means controlled bank, rudder for balance and elevator to maintain the desired variable: altitude or airspeed.",
+  "Într-un viraj de nivel mediu, înclinarea tipică este până la aproximativ 30°, la putere constantă și în echilibru.": "In a medium level turn, the bank angle is typically up to about 30°, with constant power and coordinated flight.",
+  "Când avionul se înclină, portanța se înclină și ea: o componentă produce virajul, iar alta susține greutatea.": "When the aircraft banks, lift tilts as well: one component produces the turn and the other supports weight.",
+  "În urcare, înclinarea reduce performanța de urcare; bank-ul este de obicei limitat pentru a păstra o rată rezonabilă.": "In a climb, bank reduces climb performance; bank angle is usually limited to preserve a reasonable rate of climb.",
+  "În planare sau coborâre, bank-ul influențează atât drag-ul, cât și rata de coborâre și viteza.": "In a glide or descent, bank affects drag, rate of descent and airspeed.",
+  "Ce face fiecare comandă într-un viraj de nivel mediu.": "What each control does in a medium level turn.",
+  "Rudder-ul coordonează virajul.": "The rudder coordinates the turn.",
+  "Portanța înclinată cere compensare pentru menținerea altitudinii.": "Tilted lift requires compensation to maintain altitude.",
+  "Mai mult bank reduce surplusul disponibil pentru urcare.": "More bank reduces the excess performance available for climbing.",
+  "Lookout-ul continuă pe toată manevra.": "Lookout continues throughout the manoeuvre.",
+  "Zborul lent te învață să recunoști comenzile mai puțin eficiente. Stall-ul apare când este depășit unghiul critic de atac — nu la o singură viteză fixă în toate situațiile.": "Slow flight teaches you to recognise reduced control effectiveness. A stall occurs when the critical angle of attack is exceeded — not at one single fixed airspeed in every situation.",
+  "La viteze mici, comenzile sunt mai puțin eficiente și este nevoie de mai multă atenție la atitudine, putere și coordonare.": "At low airspeeds, the controls are less effective and greater attention is needed to attitude, power and coordination.",
+  "Stall-ul este legat de depășirea unghiului critic de atac, indiferent de viteza indicată la care se întâmplă.": "A stall is associated with exceeding the critical angle of attack, regardless of the indicated airspeed at which it occurs.",
+  "Semnele pot include buffeting, pierdere de portanță, creștere de drag și tendința nasului de a coborî.": "Signs may include buffeting, loss of lift, increased drag and a tendency for the nose to drop.",
+  "Principiul esențial este reducerea unghiului de atac; apoi se reconstruiește o traiectorie sigură conform procedurii aeronavei.": "The essential principle is to reduce the angle of attack; then re-establish a safe flight path in accordance with the aircraft procedure.",
+  "Cum evoluează aripa de la zbor normal la stall și recuperare.": "How the wing progresses from normal flight to stall and recovery.",
+  "Stall-ul apare la depășirea unghiului critic de atac.": "A stall occurs when the critical angle of attack is exceeded.",
+  "Aripa trebuie mai întâi scoasă din stall prin reducerea AoA.": "The wing must first be unstalled by reducing angle of attack.",
+  "La viteză mică, autoritatea comenzilor scade.": "At low airspeed, control authority is reduced.",
+  "Încărcarea mai mare crește viteza de stall.": "A higher load factor increases stall speed.",
+  "Stall-ul poate apărea în mai multe atitudini și la viteze diferite.": "A stall can occur in different attitudes and at different airspeeds.",
+  "Punctele luminoase indică principalele componente.": "The glowing points indicate the main components."
+};
+const SOURCE_RANGES = {
+  1: 'Pooley’s Air Pilot’s Manual Vol. 1 — Exercise 1, printed pages 1–12',
+  2: 'Pooley’s Air Pilot’s Manual Vol. 1 — Exercise 2a–2c, printed pages 13–24',
+  3: 'Pooley’s Air Pilot’s Manual Vol. 1 — Exercise 3, printed pages 25–28',
+  4: 'Pooley’s Air Pilot’s Manual Vol. 1 — Exercise 4a–4j, printed pages 29–68',
+  5: 'Pooley’s Air Pilot’s Manual Vol. 1 — Exercise 5, printed pages 69–76',
+  6: 'Pooley’s Air Pilot’s Manual Vol. 1 — Exercise 6a–6c, printed pages 77–102',
+  7: 'Pooley’s Air Pilot’s Manual Vol. 1 — Exercise 7, printed pages 103–114',
+  8: 'Pooley’s Air Pilot’s Manual Vol. 1 — Exercise 8a–8d, printed pages 115–136',
+  9: 'Pooley’s Air Pilot’s Manual Vol. 1 — Exercise 9a–9d, printed pages 137–166',
+  10: 'Pooley’s Air Pilot’s Manual Vol. 1 — Exercise 10a–10b, printed pages 167–186'
+};
+function escHtml(value) { return String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c])); }
+function bilingual(value) {
+  const en = EN_TRANSLATIONS[value];
+  if (!en) return escHtml(value);
+  return `<span class="bi-text" tabindex="0" data-en="${escHtml(en)}">${escHtml(value)}<span class="bi-tooltip" role="tooltip"><small>ENGLISH</small>${escHtml(en)}</span></span>`;
+}
+function setBilingual(id, value) { $(id).innerHTML = bilingual(value); }
+
 const STORAGE_KEY = 'ppl-academy-v2-10chapters';
 const state = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
 state.current = Number.isInteger(state.current) ? Math.min(Math.max(state.current, 0), chapters.length - 1) : 0;
@@ -380,7 +518,7 @@ function updateDashboard() {
 }
 
 function renderConcepts(ch) {
-  $('conceptGrid').innerHTML = ch.concepts.map((c,i)=>`<article class="concept"><span>${String(i+1).padStart(2,'0')}</span><h3>${c[0]}</h3><p>${c[1]}</p></article>`).join('');
+  $('conceptGrid').innerHTML = ch.concepts.map((c,i)=>`<article class="concept"><span>${String(i+1).padStart(2,'0')}</span><h3>${c[0]}</h3><p>${bilingual(c[1])}</p></article>`).join('');
 }
 function renderMemory(ch) {
   $('memoryFlow').innerHTML = ch.memory.map((item,i)=>`${i?'<span class="flow-arrow">→</span>':''}<div class="flow-node">${item}</div>`).join('');
@@ -388,25 +526,25 @@ function renderMemory(ch) {
 }
 
 function renderVisual(ch) {
-  $('visualIntro').textContent = ch.visualIntro;
+  setBilingual('visualIntro', ch.visualIntro);
   $('visualTitle').textContent = ch.visualType === 'aircraft' ? 'Tap the aircraft' : 'See the logic';
   if (ch.visualType === 'aircraft') {
     $('visualBoard').innerHTML = `<div class="aircraft-stage">
       <svg class="aircraft-svg" viewBox="0 0 900 430" role="img" aria-label="Simplified top-view aircraft diagram">
         <g class="plane-shape"><path d="M430 55 L470 55 L488 170 L720 220 L720 250 L492 235 L480 360 L540 390 L535 410 L450 385 L365 410 L360 390 L420 360 L408 235 L180 250 L180 220 L412 170 Z"/><ellipse cx="450" cy="155" rx="30" ry="70"/></g>
         <g class="hotspots"><circle class="hotspot" data-part="propeller" cx="450" cy="55" r="15"/><circle class="hotspot" data-part="cockpit" cx="450" cy="150" r="15"/><circle class="hotspot" data-part="wing" cx="280" cy="225" r="15"/><circle class="hotspot" data-part="aileron" cx="205" cy="238" r="15"/><circle class="hotspot" data-part="fuselage" cx="450" cy="260" r="15"/><circle class="hotspot" data-part="tail" cx="450" cy="382" r="15"/></g>
-      </svg><div class="visual-info" id="visualInfo"><span class="eyebrow">SELECT A PART</span><h3>Aircraft overview</h3><p>Punctele luminoase indică principalele componente.</p></div></div>`;
+      </svg><div class="visual-info" id="visualInfo"><span class="eyebrow">SELECT A PART</span><h3>Aircraft overview</h3><p>${bilingual('Punctele luminoase indică principalele componente.')}</p></div></div>`;
     const map = Object.fromEntries(ch.visual.map(x=>[x[0],[x[1],x[2]]]));
     document.querySelectorAll('.hotspot').forEach(dot=>dot.addEventListener('click',()=>{
       const [title,text] = map[dot.dataset.part];
-      $('visualInfo').innerHTML = `<span class="eyebrow">AIRCRAFT PART</span><h3>${title}</h3><p>${text}</p>`;
+      $('visualInfo').innerHTML = `<span class="eyebrow">AIRCRAFT PART</span><h3>${title}</h3><p>${bilingual(text)}</p>`;
     }));
   } else if (ch.visualType === 'axes') {
-    $('visualBoard').innerHTML = `<div class="axes-grid">${ch.visual.map(v=>`<article class="axis-card"><span>${v[0]}</span><strong>${v[1]}</strong><p>${v[2]}</p><div class="axis-orbit"></div></article>`).join('')}</div>`;
+    $('visualBoard').innerHTML = `<div class="axes-grid">${ch.visual.map(v=>`<article class="axis-card"><span>${v[0]}</span><strong>${v[1]}</strong><p>${bilingual(v[2])}</p><div class="axis-orbit"></div></article>`).join('')}</div>`;
   } else if (ch.visualType === 'compare') {
-    $('visualBoard').innerHTML = `<div class="compare-grid">${ch.visual.map(v=>`<article class="compare-card"><span>${v[0]}</span><strong>${v[1]}</strong><p>${v[2]}</p></article>`).join('')}</div>`;
+    $('visualBoard').innerHTML = `<div class="compare-grid">${ch.visual.map(v=>`<article class="compare-card"><span>${v[0]}</span><strong>${v[1]}</strong><p>${bilingual(v[2])}</p></article>`).join('')}</div>`;
   } else {
-    $('visualBoard').innerHTML = `<div class="process-flow">${ch.visual.map((v,i)=>`${i?'<div class="process-arrow">→</div>':''}<article class="process-card"><span>${String(i+1).padStart(2,'0')}</span><strong>${v[0]}</strong><p>${v[1]}</p></article>`).join('')}</div>`;
+    $('visualBoard').innerHTML = `<div class="process-flow">${ch.visual.map((v,i)=>`${i?'<div class="process-arrow">→</div>':''}<article class="process-card"><span>${String(i+1).padStart(2,'0')}</span><strong>${v[0]}</strong><p>${bilingual(v[1])}</p></article>`).join('')}</div>`;
   }
 }
 
@@ -444,10 +582,10 @@ function selectAnswer(idx) {
   const item = currentChapter().quiz[qIndex];
   const buttons = [...document.querySelectorAll('.answer-btn')];
   buttons.forEach((b,i)=>{ b.disabled=true; if(i===item[2]) b.classList.add('correct'); });
-  if (idx === item[2]) { score++; $('feedback').textContent = `Correct. ${item[3]}`; }
+  if (idx === item[2]) { score++; $('feedback').innerHTML = `Correct. ${bilingual(item[3])}`; }
   else {
     buttons[idx].classList.add('wrong');
-    $('feedback').textContent = `Not quite. ${item[3]}`;
+    $('feedback').innerHTML = `Not quite. ${bilingual(item[3])}`;
     const s = currentProgress();
     if (!s.wrong.includes(qIndex)) s.wrong.push(qIndex);
   }
@@ -475,8 +613,9 @@ function renderChapter() {
   $('lessonPositionText').textContent = `Chapter ${ch.id} of ${chapters.length}`;
   $('learnEyebrow').textContent = `CHAPTER ${String(ch.id).padStart(2,'0')} • CORE IDEA`;
   $('learnTitle').textContent = ch.title;
-  $('learnLead').textContent = ch.lead;
+  setBilingual('learnLead', ch.lead);
   renderConcepts(ch); renderMemory(ch); renderVisual(ch); renderCard();
+  $('sourceReference').textContent = SOURCE_RANGES[ch.id];
   $('markLearned').textContent = s.learned ? 'Learn completed ✓' : 'Mark Learn complete';
   $('markVisual').textContent = s.visual ? 'Visual completed ✓' : 'Mark Visual complete';
   qIndex=0; score=0; answered=false; $('quizLiveScore').textContent='0 correct'; renderQuestion();
